@@ -1,0 +1,8 @@
+<div class="card-container">
+    <div *ngFor="let card of cardsData" class="example-card" [style.background-image]="'url(' + card.imageUrl + ')'">
+      <div class="overlay-text">
+        <h1>{{ card.title }}</h1>
+      </div>
+    </div>
+  </div>
+  

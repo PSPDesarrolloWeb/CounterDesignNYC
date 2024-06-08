@@ -1,0 +1,60 @@
+.example-card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* Asegura que ambos contenedores tengan la misma altura */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.swiperInfoA {
+  width: 500px;
+  height: 500px; /* Ajusta el alto del swiper */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /* Corta la imagen para que se ajuste a 50x50 */
+}
+
+.text-container {
+  flex: 2;
+  padding: 16px; /* Ajusta el espacio entre los elementos según sea necesario */
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-title, .mat-card-subtitle {
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-card-title {
+  text-align: center; /* Centra el texto dentro de los títulos de las tarjetas */
+  font-size: 50px;
+  user-select: none; 
+}
+
+mat-card-content {
+  text-align: justify; /* Justifica el texto a ambos lados dentro del contenido de las tarjetas */
+  font-size: 20px;
+  user-select: none; 
+}

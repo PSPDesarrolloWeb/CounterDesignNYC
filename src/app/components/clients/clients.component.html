@@ -1,0 +1,26 @@
+<div style="margin: 100px">
+    <h1 class="text-center">Satisfied Clients</h1>
+    <br>
+    <div class="card-container">
+        <mat-card class="example-card" *ngFor="let card of cards">
+            <mat-card-header>
+                <div class="card-header-content">
+                    <div class="circular-image">
+                        <img [src]="card.image" alt="Card Image">
+                    </div>
+                    <div class="title-with-stars">
+                        <mat-card-title>{{ card.title }}</mat-card-title>
+                        <mat-card-subtitle>
+                            <mat-icon *ngFor="let star of [1, 2, 3, 4, 5]">star</mat-icon>
+                        </mat-card-subtitle>
+                    </div>
+                </div>
+            </mat-card-header>
+            <br>
+            <mat-card-content>
+                {{ card.text }}
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>

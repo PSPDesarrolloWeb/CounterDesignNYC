@@ -1,0 +1,28 @@
+<mat-card class="example-card" >
+  <div class="card-content" style="margin: 50px">
+    <div style="width: 500px; margin: 50px; margin-right: 10px;">
+      <swiper-container class="swiperInfoA" scrollbar-hide="true" autoplay-delay="3500"
+        autoplay-disable-on-interaction="false">
+        <swiper-slide *ngFor="let image of images">
+          <img [src]="image" alt="">
+        </swiper-slide> </swiper-container>
+    </div>
+    <div class="text-container" style="margin: 10px">
+      <mat-card-header>
+        <mat-card-title class="text-center">{{titleHeader}}</mat-card-title>
+      </mat-card-header>
+      <br>
+      <mat-card-content>
+        {{longText}}
+      </mat-card-content>
+      <br>
+      <mat-card-header>
+        <mat-card-title class="text-center">Counter & Design NYC</mat-card-title>
+      </mat-card-header>
+      <br>
+      <mat-card-content>
+        {{longTextSecond}}
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>

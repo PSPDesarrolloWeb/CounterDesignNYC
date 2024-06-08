@@ -1,0 +1,55 @@
+.example-card {
+    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+    margin: 50px; /* Margen exterior */
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-container {
+    width: 40%; /* Ancho de la imagen */
+    padding-right: 20px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ajusta la imagen al contenedor */
+  }
+  
+  .text-container {
+    flex-grow: 1; /* El texto ocupa el espacio restante */
+  }
+  
+  
+  .icon {
+    font-size: 24px; /* Tamaño de los iconos */
+    margin-right: 10px; /* Espacio entre los iconos */
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: last baseline; /* Centra verticalmente los elementos */
+    align-content: center;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra horizontalmente */
+    padding-left: 200px; /* Mantiene el padding izquierdo */
+  }
+  
+
+a{
+  color: white;
+  font-size: 32px; /* Ajusta el tamaño según sea necesario */
+  margin-right: 10px; /* Ajusta el espacio según sea necesario */
+
+}
+
+  a:hover {
+    color: #949494; /* Cambia el color según sea necesario */
+  }
+    

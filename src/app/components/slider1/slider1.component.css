@@ -1,0 +1,48 @@
+.containerSwiper {
+    position: relative;
+    /* Asegura que los elementos dentro de este contenedor se posicionen correctamente */
+}
+
+.overlay-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    z-index: 10;
+    /* Asegura que el texto esté por encima del Swiper */
+    transform: translate(50%, -50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ejemplo de sombra */
+    user-select: none; /* Desactiva la selección de texto */
+    
+}
+
+.overlay-text h1{
+    font-size: 50px;
+}
+
+
+.overlay-text h2 {
+    font-size: 22px;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

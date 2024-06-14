@@ -23,7 +23,7 @@ export class Card1Component {
   stadiums, offices, buildings and yachts. We pride ourselves on
   offering the greatest selection and highest quality materials at
   the lowest installed price.`;
-  imageFolders = ['assets/img/bathroom/', 'assets/img/places/', 'assets/img/kitchen/'];
+  imageFolders = ['assets/img/top/'];
   images: SafeResourceUrl[] = [];
 
   constructor(private sanitizer: DomSanitizer) { }
@@ -38,8 +38,8 @@ export class Card1Component {
       // Obtener una carpeta aleatoria
       const folder = this.imageFolders[Math.floor(Math.random() * this.imageFolders.length)];
       // Obtener una imagen aleatoria dentro de la carpeta
-      const imageNumber = Math.floor(Math.random() * 10); // Suponiendo que hay 10 imágenes numeradas de 0 a 9
-      const imageUrl = folder + `image${imageNumber}.jpeg`; // Suponiendo que el nombre de las imágenes es 'imageX.jpeg'
+      const imageNumber = Math.floor(Math.random() * 5); // Suponiendo que hay 10 imágenes numeradas de 0 a 9
+      const imageUrl = folder + `image${imageNumber}.jpg`; // Suponiendo que el nombre de las imágenes es 'imageX.jpeg'
       // Crear una URL segura para la imagen
       const safeImageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
       // Agregar la URL segura al arreglo de imágenes

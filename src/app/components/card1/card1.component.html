@@ -1,6 +1,6 @@
 <mat-card class="example-card">
-  <div class="card-content" style="margin: 50px">
-    <div class="swiper-container-wrapper" style="margin: 50px; margin-right: 10px;">
+  <div class="card-content">
+    <div class="swiper-container-wrapper">
       <swiper-container scrollbar-hide="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
         <swiper-slide class="slide-content">
           <img src="assets/img/top/image1.jpg" alt="">
@@ -19,20 +19,20 @@
         </swiper-slide>
       </swiper-container>
     </div>
-    <div class="text-container" style="margin: 10px">
+    <div class="text-container">
       <mat-card-header>
-        <mat-card-title class="text-center">{{titleHeader}}</mat-card-title>
+        <mat-card-title>{{titleHeader}}</mat-card-title>
       </mat-card-header>
       <br>
-      <mat-card-content>
+      <mat-card-content style="text-align: justify;">
         {{longText}}
       </mat-card-content>
       <br>
       <mat-card-header>
-        <mat-card-title class="text-center">Counter & Design NYC</mat-card-title>
+        <mat-card-title>Counter & Design NYC</mat-card-title>
       </mat-card-header>
       <br>
-      <mat-card-content>
+      <mat-card-content style="text-align: justify;">
         {{longTextSecond}}
       </mat-card-content>
     </div>

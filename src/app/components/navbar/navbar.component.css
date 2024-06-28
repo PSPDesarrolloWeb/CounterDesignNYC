@@ -33,8 +33,6 @@
   opacity: 1;
 }
 
-
-
 .navbar-nav .nav-link {
   font-size: 18px;
   /* Cambia el tamaño de la fuente según sea necesario */
@@ -46,4 +44,38 @@
 
 .navbar-nav .nav-item:last-child {
   margin-right: 0; /* Elimina el margen derecho del último elemento de la lista */
+}
+
+/* Estilos adicionales para el menú en dispositivos móviles */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: black;
+    /* Hace que el fondo del menú sea negro en dispositivos móviles */
+    padding: 10px;
+    /* Añade un poco de padding alrededor del menú */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    /* Alinea los elementos del menú en una columna */
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    /* Elimina el margen derecho de los elementos del menú */
+    margin-bottom: 10px;
+    /* Añade margen inferior entre los elementos del menú */
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-bottom: 0;
+    /* Elimina el margen inferior del último elemento del menú */
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+    /* Centra el texto de los enlaces del menú */
+    padding: 10px 0;
+    /* Añade padding arriba y abajo de los enlaces del menú */
+  }
 }

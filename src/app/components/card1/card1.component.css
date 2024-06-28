@@ -1,52 +1,43 @@
 .example-card {
   display: flex;
-  flex-direction: row;
-  align-items: stretch; /* Asegura que ambos contenedores tengan la misma altura */
+  flex-direction: column;
+  align-items: stretch;
+  padding: 16px;
+  margin: auto; /* Centra la tarjeta en el contenedor */
+  max-width: 1200px; /* Ancho máximo para que no se extienda demasiado en pantallas grandes */
 }
 
 .card-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
 }
 
-
 .text-container {
-  flex: 2;
-  padding: 16px; /* Ajusta el espacio entre los elementos según sea necesario */
-}
-
-.mat-card-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.mat-card-title, .mat-card-subtitle {
-  margin: 0;
-}
-
-.text-container {
+  flex: 1;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-mat-card-title {
-  text-align: center; /* Centra el texto dentro de los títulos de las tarjetas */
-  font-size: 50px;
-  user-select: none; 
+.mat-card-title {
+  text-align: center;
+  font-size: 4vw; /* Escala con el ancho de la ventana */
+  user-select: none;
 }
 
-mat-card-content {
-  text-align: justify; /* Justifica el texto a ambos lados dentro del contenido de las tarjetas */
-  font-size: 20px;
-  user-select: none; 
+.mat-card-content {
+  text-align: justify;
+  font-size: 2vw; /* Escala con el ancho de la ventana */
+  user-select: none;
 }
 
 .swiper-container-wrapper {
   position: relative;
-  width: 500px;  /* Ancho fijo del contenedor */
-  height: 500px; /* Alto fijo del contenedor para mantener la proporción 1:1 */
+  width: 100%;
+  height: auto; /* Ajusta la altura automáticamente */
+  margin: auto; /* Centra el swiper en el contenedor */
 }
 
 swiper-container {
@@ -62,6 +53,37 @@ swiper-slide {
 
 .slide-content img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Hace que la imagen cubra el área del contenedor */
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover;
+}
+
+/* Consultas de medios para dispositivos más grandes */
+@media (min-width: 768px) {
+  .example-card {
+    flex-direction: row; /* Cambia a fila para dispositivos más grandes */
+    align-items: center; /* Centra verticalmente en dispositivos grandes */
+  }
+
+  .card-content {
+    flex-direction: row;
+  }
+
+  .swiper-container-wrapper {
+    width: 50%; /* Ajusta el ancho en dispositivos más grandes */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin: 0; /* Elimina margen adicional */
+  }
+
+  .text-container {
+    flex: 1;
+    padding: 32px; /* Aumenta el padding en dispositivos más grandes */
+  }
+
+  .mat-card-title {
+    font-size: 2vw; /* Ajusta el tamaño de la fuente */
+  }
+
+  .mat-card-content {
+    font-size: 1vw; /* Ajusta el tamaño de la fuente */
+  }
 }

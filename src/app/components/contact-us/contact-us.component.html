@@ -1,23 +1,19 @@
 <mat-card class="example-card">
   <mat-card-content>
-    <div class="card-content" style="margin: 50px">
+    <div class="card-content">
       <div class="image-container">
         <img mat-card-image src="assets/icon/logoComplete.png" alt="Imagen">
       </div>
       <div class="text-container">
-        <h2 style="text-align: center;">Contact Us</h2>
-        <div class="text-center">
-          <div style=" display: flex;
-          justify-content: center;
-          align-items: center;">
-            <mat-icon style="transform: scale(1.5); margin-right: 10px; margin-top: -7px;">mail_outline</mat-icon>
-            <p style="font-size: 25px;">{{ mail }}</p>
+        <h2 class="text-center">Contact Us</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <mat-icon class="contact-icon">mail_outline</mat-icon>
+            <p>{{ mail }}</p>
           </div>
-          <div style=" display: flex;
-          justify-content: center;
-          align-items: center;">
-            <mat-icon style="transform: scale(1.5); margin-right: 10px; margin-top: -7px;">phone</mat-icon>
-            <p style="font-size: 25px;">{{ phone }}</p>
+          <div class="contact-item">
+            <mat-icon class="contact-icon">phone</mat-icon>
+            <p>{{ phone }}</p>
           </div>
         </div>
         <div class="social-icons text-center">
@@ -30,7 +26,6 @@
           <a href="https://twitter.com/tuPerfil" target="_blank">
             <i class="bi bi-twitter-x"></i>
           </a>
-          <!-- <i class="bi bi-twitter"></i> V2 TWITTER -->
         </div>
       </div>
     </div>

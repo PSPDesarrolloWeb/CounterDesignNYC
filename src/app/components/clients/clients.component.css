@@ -1,14 +1,17 @@
 .satisfied-clients {
-  margin: 50px; /* Reduce el margen para hacer espacio en dispositivos más pequeños */
+  margin: 50px;
+  /* Reduce el margen para hacer espacio en dispositivos más pequeños */
 }
 
 .satisfied-clients h1 {
-  font-size: 4vw; /* Escala el tamaño del título con el ancho de la ventana */
+  font-size: 4vw;
+  /* Escala el tamaño del título con el ancho de la ventana */
 }
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta las columnas automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Cambia el valor mínimo a 250px para un mejor ajuste en dispositivos móviles */
   gap: 16px;
   margin: 16px 0;
 }
@@ -17,6 +20,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  /* Asegura que la tarjeta ocupe el 100% del contenedor del slide */
+  box-sizing: border-box;
+  /* Incluye padding y border en el cálculo del width y height */
 }
 
 .card-header-content {
@@ -43,7 +50,8 @@
 }
 
 .title-with-stars mat-card-title {
-  margin-right: 8px; /* Ajusta el espacio entre el título y las estrellas */
+  margin-right: 8px;
+  /* Ajusta el espacio entre el título y las estrellas */
 }
 
 mat-icon {
@@ -53,42 +61,92 @@ mat-icon {
 .circular-image {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Hace la imagen circular */
-  overflow: hidden; /* Evita que la imagen sobresalga del círculo */
+  border-radius: 50%;
+  /* Hace la imagen circular */
+  overflow: hidden;
+  /* Evita que la imagen sobresalga del círculo */
   margin-right: 16px;
 }
 
 .circular-image img {
-  width: 100%; /* Ajusta la imagen para llenar completamente el contenedor circular */
-  height: auto; /* Ajusta la altura automáticamente para mantener la relación de aspecto */
-  object-fit: cover; /* Corta la imagen para que se ajuste dentro del contenedor sin distorsión */
+  width: 100%;
+  /* Ajusta la imagen para llenar completamente el contenedor circular */
+  height: auto;
+  /* Ajusta la altura automáticamente para mantener la relación de aspecto */
+  object-fit: cover;
+  /* Corta la imagen para que se ajuste dentro del contenedor sin distorsión */
 }
 
 mat-card-content {
   text-align: justify;
 }
 
+.swiper-slide {
+  display: flex;
+  /* Asegura que el contenido de la slide se ajuste correctamente */
+  align-items: center;
+  /* Centra verticalmente el contenido de la slide */
+  justify-content: center;
+  /* Centra horizontalmente el contenido de la slide */
+  height: auto;
+  /* Asegura que la altura de la slide se ajuste al contenido */
+  width: auto;
+  flex-shrink: 0;
+}
+
 /* Consultas de medios para dispositivos más pequeños */
 @media (max-width: 768px) {
   .satisfied-clients {
-    margin: 20px; /* Reduce el margen en dispositivos móviles */
+    margin: 20px;
   }
 
   .satisfied-clients h1 {
-    font-size: 6vw; /* Ajusta el tamaño del título en dispositivos móviles */
+    font-size: 6vw;
+  }
+  mat-card-header {
+    align-self: center;
   }
 
   .card-container {
-    grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .card-header-content {
+    flex-direction: column;
+    align-items: center;
   }
 
   .card-header-content img {
-    width: 100px; /* Ajusta el tamaño de la imagen en dispositivos móviles */
-    height: 100px;
+    width: 100%;
+    height: 100%;
   }
 
   .circular-image {
-    width: 80px; /* Ajusta el tamaño del contenedor circular en dispositivos móviles */
+    width: 80px;
     height: 80px;
+  }
+
+  .title-with-stars {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-with-stars mat-card-title {
+    font-size: 14px; /* Ajusta el tamaño del título */
+    margin-right: 0; /* Elimina el margen a la derecha */
+  }
+
+  .title-with-stars mat-card-subtitle {
+    font-size: 12px; /* Ajusta el tamaño del subtítulo */
+  }
+
+  .circular-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  mat-icon {
+    font-size: 12px; /* Reduce el tamaño de las estrellas */
   }
 }

@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+import SwiperCore from 'swiper';
+
+
 
 @Component({
   selector: 'app-clients',
@@ -6,6 +9,19 @@ import { Component } from '@angular/core';
   styleUrl: './clients.component.css'
 })
 export class ClientsComponent {
+
+  public swiperOptions = {
+    scrollbar: {
+      hide: true,
+    },
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 2,
+    spaceBetween: 30,
+  };
+
   cards = [
     {
       image: 'assets/profile/man1.jpg',
@@ -28,4 +44,11 @@ export class ClientsComponent {
       text: 'This is a long text for card 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.'
     }
   ];
+
+
+  constructor() { }
+
+  
+
+  
 }
